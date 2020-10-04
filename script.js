@@ -94,15 +94,22 @@ $(document).ready(function () {
 	
 	// crate local storage to save user input for each hour
 
-	var saveButton = document.querySelector(".saveBtn");
-	var descriptionEl = document.querySelector(".description");
+
+
+
+
+	var saveButton = document.querySelector("#saveButtonId");
+	var descriptionEl = document.querySelector("#entry");
 	
 	var userInput = localStorage.getItem("input");
 	descriptionEl.textContent = userInput;
 
-	saveButton.addEventListener("click", function(){
-		descriptionEl.textContent = userInput;
+	saveButton.addEventListener("click", function(event){
+		event.preventDefault();
 
+		descriptionEl.textContent = userInput;
+		console.log(userInput);
+		
 		localStorage.setItem("input", userInput);
 
 	});
