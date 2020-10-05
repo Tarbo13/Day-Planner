@@ -94,34 +94,55 @@ $(document).ready(function () {
 	
 	// crate local storage to save user input for each hour
 
-
-
-
-
-	var saveButton = document.querySelector(".saveBtn");
 	
-	var entryEl = document.querySelector("#entry");
-	
-	
+	// var entryEl = document.querySelector("#entry");
 
-	var value = localStorage.getItem("input");
-	entryEl.textContent = value;
-
-	saveButton.addEventListener("click", function(event){
-		event.preventDefault();	
-		
-
+	$(".saveBtn").click(function(event){
+		event.preventDefault();    
+	  
 		var value = $(this).siblings(".description").val();
 		console.log('The value of the text is:', value);
+				
 		
-		
+		$(".row").each(function(){
+			var key = $(this).attr("id");
+			localStorage.getItem(key);
+			console.log('The key (hour) is: ', key);
 
-		entryEl.textContent = value;
-		console.log(value);
-
-		localStorage.setItem("input", value);
-	
+			localStorage.setItem(key, value);
+			$("<textarea>").text(value);
+		  });
+		  
 	});
+	
+
+	  
+
+	 // var saveButton = document.querySelector(".saveBtn");
+	
+	// var tasks = document.querySelector("#entry");
+	
+	
+
+	// var value = localStorage.getItem("input");
+	// tasks.textContent = value;
+
+
+
+	// saveButton.addEventListener("click", function(event){
+	// 	event.preventDefault();	
+		
+
+	// 	var value = $(this).siblings(".description").val();
+	// 	console.log('The value of the text is:', value);
+		
+		
+	// 	entryEl.textContent = value;
+	// 	console.log(value);
+
+	// 	localStorage.setItem("input", value);
+	
+	// });
 
 	
 
