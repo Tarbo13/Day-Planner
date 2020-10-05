@@ -98,22 +98,32 @@ $(document).ready(function () {
 
 
 
-	var saveButton = document.querySelector("#saveButtonId");
-	var descriptionEl = document.querySelector("#entry");
+	var saveButton = document.querySelector(".saveBtn");
 	
-	var userInput = localStorage.getItem("input");
-	descriptionEl.textContent = userInput;
+	var entryEl = document.querySelector("#entry");
+	
+	
+
+	var value = localStorage.getItem("input");
+	entryEl.textContent = value;
 
 	saveButton.addEventListener("click", function(event){
-		event.preventDefault();
-
-		descriptionEl.textContent = userInput;
-		console.log(userInput);
+		event.preventDefault();	
 		
-		localStorage.setItem("input", userInput);
 
+		var value = $(this).siblings(".description").val();
+		console.log('The value of the text is:', value);
+		
+		
+
+		entryEl.textContent = value;
+		console.log(value);
+
+		localStorage.setItem("input", value);
+	
 	});
 
+	
 
 });
 
