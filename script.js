@@ -109,46 +109,46 @@ $(document).ready(function () {
 			localStorage.getItem(key);
 			console.log('The key (hour) is: ', key);
 
+			
+			
+
 			localStorage.setItem(key, value);
 			$("<textarea>").text(value);
+
+					
+	
 		  });
 		  
 	});
 	
 
-	  
-
-	 // var saveButton = document.querySelector(".saveBtn");
-	
-	// var tasks = document.querySelector("#entry");
-	
-	
-
-	// var value = localStorage.getItem("input");
-	// tasks.textContent = value;
-
-
-
-	// saveButton.addEventListener("click", function(event){
-	// 	event.preventDefault();	
-		
-
-	// 	var value = $(this).siblings(".description").val();
-	// 	console.log('The value of the text is:', value);
-		
-		
-	// 	entryEl.textContent = value;
-	// 	console.log(value);
-
-	// 	localStorage.setItem("input", value);
-	
-	// });
+	 
+	$("#hour-9 .description").val(localStorage.getItem("hour-9"));
+	$("#hour-10 .description").val(localStorage.getItem("hour-10"));
+	$("#hour-11 .description").val(localStorage.getItem("hour-11"));
+	$("#hour-12 .description").val(localStorage.getItem("hour-12"));
+	$("#hour-13 .description").val(localStorage.getItem("hour-13"));
+	$("#hour-14 .description").val(localStorage.getItem("hour-14"));
+	$("#hour-15 .description").val(localStorage.getItem("hour-15"));
+	$("#hour-16 .description").val(localStorage.getItem("hour-16"));
+	$("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
 	
 
 });
 
 
+
+// //1. store array values in the local stoorage for each hour
+// //2. first get the values from the localstorage and save it in a var
+// var datafromLoca = localStorage.getItem("hour-9");
+
+// //userData is the user text
+// datafromLoca.push(userData);
+
+// //now store the datafromLoca to the localstorage
+// localStorage.setItem("hour-9", datafromLoca);
+// localStorage.setItem("hour-10", datafromLoca);
 
 
 
