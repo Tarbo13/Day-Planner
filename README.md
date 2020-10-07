@@ -1,7 +1,9 @@
 # Project Discription
 
-Here I was tasked with creating a day planner app that would display and track the current time and day.  My app consists of nine hour blocks of time that will be shadded a diffrent color based on the time of day: (Grey == Past, Red == Present, & Green == Future).  A user is able to enter their daily tasks into each hour block and save the entries so that they remain on the page after it is refreshed or closed and reopened.  
-I used a combination of Bootstrap, JavaScript, JQuery, and CSS to create this app.  Bootstrap's grid system is used to create the layout of the app.  I then used varous CSS classes to style the page.  I also used FontAwesome in this project to get the disk icons that were used on the save buttons.  
+Here I was tasked with creating a day planner app that would display and track the current time and day.  My app consists of nine hour blocks of time that will be shaded a different color based on the time of day: (Grey == Past, Red == Present, & Green == Future).  A user is able to enter their daily tasks into each hour block and save the entries so that they remain on the page after it is refreshed or closed and reopened.  
+I used a combination of Bootstrap, JavaScript, JQuery, and CSS to create this app.  Bootstrap's grid system is used to create the layout of the app.  I then used various CSS classes to style the page.  I also used FontAwesome in this project to get the disk icons that were used on the save buttons.  I used JavaScript and JQuery to shade the various time blocks based on the current time of day.  There are style classes in my .css file that pull the style instructions for past, present, and future.  I used a click event on the save button to store the users input into each hour block into local storage.  When my app reloads the users data remains on the page.  
+I used moment.js to track the date and time of day.  I was able to pull from their API by linking their CDN to my page and entering prewritten functions that moment provides in their documentation.
+    
 
 
 ## Links
